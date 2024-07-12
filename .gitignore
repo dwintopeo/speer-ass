@@ -16,3 +16,4 @@
 /.vs
 /Logs
 /Db/NotesDb.ldf
+/Db/NotesDb.mdf
