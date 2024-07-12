@@ -4,7 +4,6 @@ GO
 USE [SpeerDb]
 GO
 
-/****** Object: Table [dbo].[Notes] Script Date: 12 Jul 2024 01:01:57 ******/
 SET ANSI_NULLS ON
 GO
 
@@ -20,18 +19,22 @@ CREATE TABLE [dbo].[Notes] (
     [UpdatedBy] NVARCHAR (50)  NULL,
     [UpdatedOn] DATETIME       NULL
 );
-
-
 GO
+
 CREATE NONCLUSTERED INDEX [IX_Notes_UserName]
     ON [dbo].[Notes]([CreatedBy] ASC);
 
 
 GO
-CREATE NONCLUSTERED INDEX [IX_Notes_Details]
-    ON [dbo].[Notes]([Details] ASC);
 
+CREATE UNIQUE INDEX [IX_Notes_Id] ON [dbo].[Notes] ([Id])
+GO
 
+CREATE FULLTEXT CATALOG NoteCatalog;
+GO
+
+CREATE FULLTEXT INDEX ON [dbo].[Notes] ([Title], [Details]) KEY INDEX [IX_Notes_Id] ON [NoteCatalog] WITH CHANGE_TRACKING AUTO
+GO
 
 CREATE TABLE [dbo].[SharedNotes] (
     [Id]         BIGINT        IDENTITY (1, 1) NOT NULL,
@@ -40,7 +43,7 @@ CREATE TABLE [dbo].[SharedNotes] (
     [SharedBy]   NVARCHAR (50) NOT NULL,
     [SharedOn]   DATETIME      NOT NULL
 );
-
+GO
 
 CREATE TABLE [dbo].[Users] (
     [UserName]  NVARCHAR (50)  NOT NULL,
@@ -48,8 +51,8 @@ CREATE TABLE [dbo].[Users] (
     [CreatedOn] DATETIME       NOT NULL
 );
 
-
 GO
+
 CREATE NONCLUSTERED INDEX [IX_Users_Column]
     ON [dbo].[Users]([UserName] ASC);
 

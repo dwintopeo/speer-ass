@@ -8,10 +8,8 @@ Please follow the steps below to setup the code on your dev environment;
 
 1. Checkout from repo and open with Visual Studio 2022
 2. Setup the database;
-     * Option 1: Attach the database file located in {SolutionDirectory}\Db\NotesDb.mdf
-     * Option 2: Create a new database and tables by running the scripts located in {SolutionDirectory}\Deploy\DbScripts.txt
-
-The possible connection strings for the 2 options are located in the appsettings.json. Please make use of the one applicable to your database setting. 
+     * Create a new database and tables by running the scripts located in {SolutionDirectory}\Deploy\DbScripts.sql
+	 * Please change connection string in the appsettings.json accordingly. 
 
 Please build the code for the IDE to download the dependencies for Nuget.
 

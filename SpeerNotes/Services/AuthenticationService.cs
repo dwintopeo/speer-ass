@@ -20,7 +20,8 @@ namespace SpeerNotes.Services
                     return response;
                 }
                 var _user = new User { UserName = request.UserName, Password = request.Password.Crypt() };
-                db.Users.Add(_user);
+                //db.Users.Add(_user);
+                db.Add(_user);
                 await db.SaveChangesAsync();
             }
             catch (Exception ex)
@@ -39,13 +40,13 @@ namespace SpeerNotes.Services
                 var _user = await db.Users.FirstOrDefaultAsync(a => a.UserName == request.UserName);
                 if (_user == null)
                 {
-                    response.AddError(StatusCodes.Status400BadRequest.ToString(), "Invalid Username or Password.");
+                    response.AddError(StatusCodes.Status404NotFound.ToString(), "Invalid Username or Password.");
                     logger.LogDebug($"{request.UserName} does not exist in the database.");
                     return response;
                 }
-                if (_user.Password!= request.Password.Crypt())
+                if (_user.Password != request.Password.Crypt())
                 {
-                    response.AddError(StatusCodes.Status400BadRequest.ToString(), "Invalid Username or Password.");
+                    response.AddError(StatusCodes.Status404NotFound.ToString(), "Invalid Username or Password.");
                     logger.LogDebug($"{request.UserName}: Password not correct.");
                     return response;
                 }

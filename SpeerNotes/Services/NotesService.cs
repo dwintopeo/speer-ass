@@ -65,7 +65,7 @@ namespace SpeerNotes.Services
                     Details = request.Details,
                     Title = request.Title
                 };
-                db.Notes.Add(_note);
+                db.Add(_note);
                 await db.SaveChangesAsync();
                 response.NoteId = _note.Id;
             }
@@ -92,6 +92,7 @@ namespace SpeerNotes.Services
                 _note.Details = request.Details;
                 _note.Title = request.Title;
                 _note.UpdatedBy = username;
+                db.Update(_note);
                 await db.SaveChangesAsync();
             }
             catch (Exception ex)
@@ -113,7 +114,7 @@ namespace SpeerNotes.Services
                     response.AddError(StatusCodes.Status404NotFound.ToString(), "No records found.");
                     return response;
                 }
-                db.Notes.Remove(item);
+                db.Remove(item);
                 await db.SaveChangesAsync();
             }
             catch (Exception ex)
@@ -183,9 +184,12 @@ namespace SpeerNotes.Services
                     response.AddError(StatusCodes.Status400BadRequest.ToString(), "Search string is required.");
                     return response;
                 }
-                var query = await db.Notes.Where(a => a.CreatedBy == username
-                && (a.Title.Contains(q) || a.Details.Contains(q)))
-                    .ToListAsync();
+                var isSql = db.Database?.IsSqlServer();
+                var query = isSql.HasValue && isSql.Value ?
+                    await db.Notes.Where(a => a.CreatedBy == username
+                      && (EF.Functions.Contains(a.Title, $"\"{q}\"") || EF.Functions.Contains(a.Details, $"\"{q}\""))).ToListAsync() :
+                    await db.Notes.Where(a => a.CreatedBy == username && (a.Title.Contains(q) || a.Details.Contains(q))).ToListAsync();
+
                 if (!query.Any())
                 {
                     response.AddError(StatusCodes.Status404NotFound.ToString(), "No records found.");
