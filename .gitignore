@@ -13,3 +13,5 @@
 /SpeerNotes/Properties/PublishProfiles/speer-assessment - Zip Deploy.pubxml.user
 /SpeerNotes.Tests/bin/Debug/net8.0
 /SpeerNotes.Tests/obj/Debug/net8.0
+/.vs
+/Logs
