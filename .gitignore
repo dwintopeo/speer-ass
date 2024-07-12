@@ -15,3 +15,4 @@
 /SpeerNotes.Tests/obj/Debug/net8.0
 /.vs
 /Logs
+/Db/NotesDb.ldf
