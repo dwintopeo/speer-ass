@@ -1,0 +1,15 @@
+﻿################################################################################
+# This .gitignore file was automatically created by Microsoft(R) Visual Studio.
+################################################################################
+
+/SpeerNotes/Properties/PublishProfiles/speer-assessment - FTP.pubxml
+/SpeerNotes/Properties/PublishProfiles/speer-assessment - Web Deploy.pubxml
+/SpeerNotes/Properties/PublishProfiles/speer-assessment - Zip Deploy.pubxml
+/SpeerNotes/obj/Debug/net8.0
+/SpeerNotes/obj/publish/win-x86
+/SpeerNotes/obj/Release/net8.0
+/SpeerNotes/Properties/PublishProfiles/speer-assessment - FTP.pubxml.user
+/SpeerNotes/Properties/PublishProfiles/speer-assessment - Web Deploy.pubxml.user
+/SpeerNotes/Properties/PublishProfiles/speer-assessment - Zip Deploy.pubxml.user
+/SpeerNotes.Tests/bin/Debug/net8.0
+/SpeerNotes.Tests/obj/Debug/net8.0
