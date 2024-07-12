@@ -1,0 +1,6 @@
+@SpeerNotes_HostAddress = http://localhost:5099
+
+GET {{SpeerNotes_HostAddress}}/notes/
+Accept: application/json
+
+###
