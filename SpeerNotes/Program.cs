@@ -95,6 +95,13 @@ app.UseRateLimiter();
 //{
 app.UseSwagger();
 app.UseSwaggerUI();
+
+//using (var scope = app.Services.CreateScope())
+//{
+//    var dbContext = scope.ServiceProvider.GetRequiredService<NotesDbContext>();
+//    dbContext.Database.EnsureCreated();
+//dbContext.Seed();
+//}
 //}
 
 app.UseAuthorization();
@@ -103,7 +110,7 @@ app.MapControllers();
 
 app.MapGet("/", async context =>
 {
-    await context.Response.WriteAsync("Speer Notes Api Service");
+    await context.Response.WriteAsync("<b>Speer Notes Api Service</b><br/><br/><a href='/swagger'>Click here to view the swagger page</a>");
 });
 
 app.Run();

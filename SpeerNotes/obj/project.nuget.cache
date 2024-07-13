@@ -1,6 +1,6 @@
 {
   "version": 2,
-  "dgSpecHash": "QrCfw+EOo8o=",
+  "dgSpecHash": "tcIIWZppDf0=",
   "success": true,
   "projectFilePath": "D:\\Applications\\Projects\\SpeerAssessment\\SpeerNotes\\SpeerNotes.csproj",
   "expectedPackageFiles": [
@@ -49,6 +49,7 @@
     "C:\\Users\\OladapoWintope\\.nuget\\packages\\microsoft.identitymodel.tokens\\7.6.3\\microsoft.identitymodel.tokens.7.6.3.nupkg.sha512",
     "C:\\Users\\OladapoWintope\\.nuget\\packages\\microsoft.openapi\\1.6.14\\microsoft.openapi.1.6.14.nupkg.sha512",
     "C:\\Users\\OladapoWintope\\.nuget\\packages\\microsoft.sqlserver.server\\1.0.0\\microsoft.sqlserver.server.1.0.0.nupkg.sha512",
+    "C:\\Users\\OladapoWintope\\.nuget\\packages\\microsoft.visualstudio.azure.containers.tools.targets\\1.20.1\\microsoft.visualstudio.azure.containers.tools.targets.1.20.1.nupkg.sha512",
     "C:\\Users\\OladapoWintope\\.nuget\\packages\\microsoft.win32.systemevents\\6.0.0\\microsoft.win32.systemevents.6.0.0.nupkg.sha512",
     "C:\\Users\\OladapoWintope\\.nuget\\packages\\mono.texttemplating\\2.2.1\\mono.texttemplating.2.2.1.nupkg.sha512",
     "C:\\Users\\OladapoWintope\\.nuget\\packages\\serilog\\3.1.1\\serilog.3.1.1.nupkg.sha512",

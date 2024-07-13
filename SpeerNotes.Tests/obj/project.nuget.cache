@@ -1,6 +1,6 @@
 {
   "version": 2,
-  "dgSpecHash": "cEsekfXIvAE=",
+  "dgSpecHash": "sSULuIjnCgs=",
   "success": true,
   "projectFilePath": "D:\\Applications\\Projects\\SpeerAssessment\\SpeerNotes.Tests\\SpeerNotes.Tests.csproj",
   "expectedPackageFiles": [
@@ -47,6 +47,7 @@
     "C:\\Users\\OladapoWintope\\.nuget\\packages\\microsoft.sqlserver.server\\1.0.0\\microsoft.sqlserver.server.1.0.0.nupkg.sha512",
     "C:\\Users\\OladapoWintope\\.nuget\\packages\\microsoft.testplatform.objectmodel\\17.10.0\\microsoft.testplatform.objectmodel.17.10.0.nupkg.sha512",
     "C:\\Users\\OladapoWintope\\.nuget\\packages\\microsoft.testplatform.testhost\\17.10.0\\microsoft.testplatform.testhost.17.10.0.nupkg.sha512",
+    "C:\\Users\\OladapoWintope\\.nuget\\packages\\microsoft.visualstudio.azure.containers.tools.targets\\1.20.1\\microsoft.visualstudio.azure.containers.tools.targets.1.20.1.nupkg.sha512",
     "C:\\Users\\OladapoWintope\\.nuget\\packages\\microsoft.win32.systemevents\\6.0.0\\microsoft.win32.systemevents.6.0.0.nupkg.sha512",
     "C:\\Users\\OladapoWintope\\.nuget\\packages\\moq\\4.20.70\\moq.4.20.70.nupkg.sha512",
     "C:\\Users\\OladapoWintope\\.nuget\\packages\\moq.entityframeworkcore\\8.0.1.2\\moq.entityframeworkcore.8.0.1.2.nupkg.sha512",
