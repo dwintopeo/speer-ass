@@ -17,3 +17,7 @@
 /Logs
 /Db/NotesDb.ldf
 /Db/NotesDb.mdf
+/SpeerNotes/obj/Container
+/SpeerNotes/obj/Docker/publish
+/SpeerNotes/Properties/PublishProfiles/speernotes.pubxml.user
+/SpeerNotes/Properties/PublishProfiles/speernotes.pubxml
